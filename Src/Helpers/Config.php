@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace BugReport\Helpers;
 
+use BugReport\Exception\NotFoundException;
+
 class Config
 {
     public static function get(string $filename, string $key = null)
@@ -23,7 +25,7 @@ class Config
                 $fileContent = require $path;
             }
         } catch (\Throwable $th) {
-            throw new \RuntimeException(
+            throw new NotFoundException(
                 sprintf('The specified file: %s was not found', $filename)
             );
         }

@@ -25,8 +25,9 @@ class App
         return $this->config['env'] ?? 'production';
     }
 
-    public function getLogPath() {
-        if(!isset($this->config['log_path'])) {
+    public function getLogPath()
+    {
+        if (!isset($this->config['log_path'])) {
             throw new \Exception('Log path is not defined');
         }
         return $this->config['log_path'];
