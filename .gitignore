@@ -1,2 +1,4 @@
 vendor
 Configs/app.php
+*.cache
+*.bak
