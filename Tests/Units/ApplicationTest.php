@@ -7,8 +7,17 @@ use PHPUnit\Framework\TestCase;
 
 class ApplicationTest extends TestCase
 {
-    public function testitCanGetInstanceOfApplication()
+    public function testItCanGetInstanceOfApplication()
     {
         self::assertInstanceOf(App::class, new App());
+    }
+
+    public function testItCanGetBasicApplicationDatasetFromAppClass()
+    {
+        $application = new App;
+        self::assertTrue($application->isRunningFromConsole());
+        self::assertSame('test', $application->getEnviroment());
+        self::assertNotNull($application->getLogPath());
+        self::assertInstanceOf(\DateTime::class, $application->getServerTime());
     }
 }

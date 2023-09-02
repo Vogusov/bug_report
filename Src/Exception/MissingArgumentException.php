@@ -4,6 +4,6 @@ declare(strict_types=1);
 
 namespace BugReport\Exception;
 
-class MissingArgumentException
+class MissingArgumentException extends BaseException
 {
 }

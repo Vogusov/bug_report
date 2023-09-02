@@ -6,6 +6,7 @@
     stopOnFailure="false"
     xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.1/phpunit.xsd"
     cacheDirectory=".phpunit.cache">
+
     <testsuites>
         <testsuite name="Unit">
             <directory>Test/Unit</directory>
@@ -14,4 +15,9 @@
             <directory>Test/Functional</directory>
         </testsuite>
     </testsuites>
+
+    <php>
+        <const name="PHPUNIT_RUNNING" value="true" />
+    </php>
+
 </phpunit>
