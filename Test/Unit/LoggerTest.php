@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Units;
+namespace Test\Unit;
 
 use BugReport\Contracts\LoggerInterface;
 use BugReport\Exception\InvalidLogLevelArgument;

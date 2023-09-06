@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Units;
+namespace Test\Unit;
 
 use BugReport\Helpers\App;
 use PHPUnit\Framework\TestCase;
