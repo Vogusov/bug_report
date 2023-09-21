@@ -20,6 +20,10 @@ abstract class AbstractConnection
 
 
 
+    abstract protected function parseCredentials(array $credentials): array;
+
+
+
     public function __construct(array $credentials)
     {
         $this->credentials = $credentials;
@@ -33,9 +37,12 @@ abstract class AbstractConnection
         }
     }
 
+    
 
     /**
      * Validation of credentials
+     * @param array $credentials
+     * @return bool
      */
     private function credentialsHaveRequiredKeys(array $credentials): bool
     {

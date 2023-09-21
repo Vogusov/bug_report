@@ -1,4 +1,5 @@
 vendor
 Configs/app.php
+Configs/database.php
 *.cache
 *.bak
